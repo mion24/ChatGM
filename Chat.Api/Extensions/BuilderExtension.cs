@@ -25,7 +25,7 @@ namespace Chat.Api.Extensions
             builder.Services.AddDbContext<AppDbContext>(x =>
            x.UseSqlServer(
                Configuration.Database.ConnectionString,
-               b => b.MigrationsAssembly("Blog.Api")));
+               b => b.MigrationsAssembly("Chat.Api")));
         }
 
         public static void AddJwtAuthentication(this WebApplicationBuilder builder)

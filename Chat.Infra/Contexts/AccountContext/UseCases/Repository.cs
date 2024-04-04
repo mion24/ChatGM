@@ -17,6 +17,10 @@ namespace Chat.Infra.Contexts.AccountContext.UseCases
         public async Task<bool> AnyAsync(string email, CancellationToken cancellationToken)
             => await _context.Users.AsNoTracking().AnyAsync(x => x.EmailAddress == email, cancellationToken);
 
+        public async Task<User?> GetUserByEmailAsync(string email, CancellationToken cancellationToken)
+        {
+            return await _context.Users.AsNoTracking().FirstOrDefaultAsync(x => x.EmailAddress == email, cancellationToken);
+        }
 
         public async Task SaveAsync(User user, CancellationToken cancellationToken)
         {

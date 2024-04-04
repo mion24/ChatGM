@@ -9,7 +9,13 @@ namespace Chat.Application.Contexts.AccountContext.UseCases
 {
     public interface IRepository
     {
+        #region Create
         Task<bool> AnyAsync(string email, CancellationToken cancellationToken);
         Task SaveAsync(User user, CancellationToken cancellationToken);
+        #endregion
+
+        #region Auth
+        Task<User?> GetUserByEmailAsync(string email, CancellationToken cancellationToken);
+        #endregion
     }
 }

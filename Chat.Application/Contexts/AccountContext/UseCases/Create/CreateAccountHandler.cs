@@ -31,12 +31,11 @@ namespace Chat.Application.Contexts.AccountContext.UseCases.Create
             }
 
             User user;
-            Name name;
+            string fullName = request.FirstName + " " + request.LastName;
 
             try
             {
-                name = new(request.FirstName, request.LastName);
-                user = new(request.EmailAddress, name, request.PlainTextPassword);
+                user = new(request.EmailAddress, fullName, request.PlainTextPassword);
             }
             catch
             {

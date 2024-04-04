@@ -10,6 +10,9 @@ namespace Chat.Domain.Contexts.AccountContext.ValueObjects
 {
     public class Password : ValueObject
     {
+        protected Password()
+        { }
+
         public Password(string plainPassword)
         {
             Hash = PasswordHasher.Hash(plainPassword);

@@ -8,7 +8,7 @@ namespace Chat.Domain.Contexts.AccountContext.Entities
         protected User()
         { }
 
-        public User(string emailAddress, Name name, Password password, string? profilePhoto = null)
+        public User(string emailAddress, string name, Password password, string? profilePhoto = null)
         {
             EmailAddress = emailAddress;
             Name = name;
@@ -17,7 +17,7 @@ namespace Chat.Domain.Contexts.AccountContext.Entities
         }
 
         public string EmailAddress { get; private set; } = string.Empty;
-        public Name Name { get; private set; } = null!;
+        public string Name { get; private set; } = string.Empty;
         public Password Password { get; private set; } = null!;
         public string? ProfilePhoto { get; set; } = string.Empty;
     }

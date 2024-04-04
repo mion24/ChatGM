@@ -24,7 +24,7 @@ namespace Chat.Infra.Contexts.AccountContext.Mappings
                 .IsRequired(true);
 
             builder.Property(x => x.EmailAddress)
-                .HasColumnName("Name")
+                .HasColumnName("EmailAddress")
                 .HasColumnType("NVARCHAR")
                 .HasMaxLength(120)
                 .IsRequired(true);
