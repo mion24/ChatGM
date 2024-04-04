@@ -6,6 +6,5 @@ using System.Threading.Tasks;
 
 namespace Chat.Application.Contexts.ChatContext.DTO
 {
-    
-    public record ChatUser(string Name, string EmailAddress, string ConnectionID);
+    public record ChatUser(string Name, string EmailAddress, string ConnectionID); 
 }

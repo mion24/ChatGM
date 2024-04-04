@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Chat.Application.Contexts.AccountContext.UseCases.Create
 {
-    public class CreateAccountResponse : SharedContext.UseCases.Response
+    public class CreateAccountResponse : Response
     {
         public CreateAccountResponse(string message, ResponseData data)
         {

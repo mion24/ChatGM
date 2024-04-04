@@ -15,6 +15,12 @@ namespace Chat.Api.Hubs
             await base.OnConnectedAsync();
         }
 
+        public override Task OnDisconnectedAsync(Exception? exception)
+        {
+            ConnectedUsers.Remove(ConnectedUsers.FirstOrDefault(x => x.ConnectionID == Context.ConnectionId)!);
+            return base.OnDisconnectedAsync(exception);
+        }
+
         public async Task SendMessage(string message)
         {
             ChatMessage chatMessage = new(message, DateTime.Now, ConnectedUsers.First(x => x.ConnectionID.Equals(Context.ConnectionId)));
