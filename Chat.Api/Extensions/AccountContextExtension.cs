@@ -17,7 +17,7 @@ namespace Chat.Api.Extensions
 
         public static void MapAccountEndpoints(this WebApplication app)
         {
-            #region Auth
+            #region Register
             app.MapPost("v1/users", async (CreateAccountRequest request, IRequestHandler<CreateAccountRequest, CreateAccountResponse> handler) =>
             {
                 var result = await handler.Handle(request, new CancellationToken());
