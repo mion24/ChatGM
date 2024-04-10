@@ -1,0 +1,33 @@
+﻿@page "/chat"
+
+<header>
+    <Chat.Blazor.Components.Components.NavBar>
+    </Chat.Blazor.Components.Components.NavBar>
+</header>
+
+<div class="bg-dark d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    <div class="container-lg bg-white rounded p-4" style="height: 80vh;">
+        <!-- Definindo a altura do contêiner -->
+        <h2 class="text-center">Chat GM</h2>
+        <div class="message-area overflow-auto" style="height: calc(100% - 130px);">
+            <!-- Definindo a altura da área de mensagens -->
+            <div class="received-message message-card">
+                <div class="card-body">
+                    <p class="card-text">Olá! Como vai você?</p>
+                </div>
+            </div>
+            <div class="sent-message message-card">
+                <div class="card-body">
+                    <p class="card-text">Estou bem, obrigado por perguntar!</p>
+                </div>
+            </div>
+            <!-- Adicione mais mensagens conforme necessário -->
+        </div>
+        <div class="input-group mt-3">
+            <input type="text" class="form-control" placeholder="Digite sua mensagem...">
+            <div class="input-group-append">
+                <button class="btn btn-dark" type="button">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>

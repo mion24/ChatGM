@@ -1,0 +1,19 @@
+﻿.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; 
+}
+
+.message-card {
+    margin-bottom: 10px;
+}
+
+.received-message {
+    background-color: #e9ecef;
+}
+
+.sent-message {
+    background-color: #6c757d;
+    color: white;
+}
